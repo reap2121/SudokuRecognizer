@@ -1,15 +1,16 @@
 package application;
 
 import imageProcessing.ImageProcessor;
-import org.opencv.core.Core;
 
 public class Application {
+
+    private static final String IMAGE_PATH = "resources/sudoku.png";
 
     public static void main( String[] args ) {
         nu.pattern.OpenCV.loadLocally();
         ImageProcessor proc = new ImageProcessor();
 
-        proc.test();
+        proc.processImage(IMAGE_PATH);
     }
 
 }
